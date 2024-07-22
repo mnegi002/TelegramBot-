@@ -22,10 +22,12 @@ router.post('/delete', async (req, res) => {
   res.status(200).send('User deleted');
 });
 
-// API to update settings (example route, update based on your requirements)
-router.post('/settings', (req, res) => {
-  // Handle settings update
-  res.status(200).send('Settings updated');
+// API to get settings
+router.get('/settings', (req, res) => {
+  const settings = {
+    apiKey: process.env.WEATHER_API_KEY || 'default_api_key', // Provide a default value if the environment variable is not set
+  };
+  res.json(settings);
 });
 
 module.exports = router;

@@ -5,7 +5,7 @@ const bot = require('./bot');
 const adminRoutes = require('./admin');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4000;
 
 // Connect to MongoDB
 connectDB();
